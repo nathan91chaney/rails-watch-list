@@ -1,0 +1,7 @@
+<h2>create a new bookmark</h2>
+
+<%= simple_form_for [@movie, @comment] do |f| %>
+  <%= f.input :movie %>
+  <%= f.input :comment %>
+  <%= f.submit%>
+<% end %>
