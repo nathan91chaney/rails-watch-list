@@ -1,4 +1,8 @@
 <h1>Watch list</h1>
+<ul>
 <% @lists.each do |list| %>
-  <%= "#{list.name}" %>
+  <li> <%= link_to "#{list.name}", list_path(list) %> </li>
+<p><%= link_to "Delete", list_path(list), method: :delete, data: {confirm: "Are you sure?"} %></p>
 <% end %>
+</ul>
+<%= link_to "Add a New List", new_list_path %>
